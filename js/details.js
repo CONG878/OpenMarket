@@ -99,7 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             quantityInput.addEventListener('change', () => {
+                quantity = parseInt(quantityInput.value) || 0;
                 quantity = Math.min(Math.max(0, quantity), data.stock);
+                quantityInput.value = quantity;
                 updateButtons();
                 updatePrice();
             });
