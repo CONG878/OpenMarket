@@ -68,7 +68,7 @@
     color: #767676;
 }
 .tab-content input:focus {
-    border-bottom: 1px solid #0078d7;
+    border-bottom: 1px solid #21BF48;
 }
 .tab-content input #user-id {
     font-weight: 500;
