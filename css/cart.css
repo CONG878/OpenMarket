@@ -1,0 +1,229 @@
+h1 {
+    text-align: center;
+}
+
+/* 기본 체크박스 숨김 */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Label 기본 스타일 */
+label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid #21BF48;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0 30px;
+}
+
+/* 체크된 상태의 스타일 */
+input[type="checkbox"]:checked+label::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #21BF48;
+}
+
+.green {
+    width: 220px;
+    height: 68px;
+    display: block;
+    margin: 0 auto;
+}
+
+.green.small {
+    width: 130px;
+    height: 40px;
+}
+
+.header-row,
+.total-amount {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header-row {
+    height: 60px;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-quantity {
+    width: 250px;
+}
+
+.product-price {
+    width: 330px;
+}
+
+.total-amount {
+    height: 150px;
+}
+
+.total-amount p {
+    flex: 1;
+}
+
+.total-amount p span {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30.05px;
+}
+
+.total-amount p.total-price {
+    font-weight: 700;
+}
+
+.total-amount p.total-price .final-price {
+    font-size: 36px;
+    line-height: 45.07px;
+    color: #EB5757;
+}
+
+.order {
+    margin-top: 40px;
+    margin-bottom: 160px;
+}
+
+.products-in-cart {
+    display: flex;
+    flex-direction: column;
+    margin: 35px auto 80px;
+    align-items: center;
+    gap: 10px;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E0E0E0;
+    border-radius: 10px;
+    width: 1280px;
+    height: 200px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+figure img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: none;
+    border-radius: 10px;
+}
+
+figure {
+    display: flex;
+    gap: 36px;
+    margin: 0;
+    margin-left: 10px;
+    align-items: center;
+    flex: 1;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+}
+
+figcaption .text-sm {
+    margin: 6px 0 0;
+}
+
+h2 {
+    margin: 10px 0;
+}
+
+figcaption .text-md {
+    margin: 0;
+    flex: 1;
+}
+
+figcaption .shipping {
+    margin: 0 0 16px;
+}
+
+/* 수량 조절 버튼 */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    border: none;
+    width: 250px;
+    justify-content: center;
+}
+
+.adjust {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #C4C4C4;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+}
+
+.dec {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.inc {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.quantity-controls input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
+    gap: 26px;
+}
+
+.amount .text-lg {
+    font-weight: 700;
+    margin: 4px 0 0;
+    color: #EB5757;
+}
+
+.close {
+    border: none;
+    padding: none;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    box-sizing: border-box;
+}
+
+.close img {
+    display: block;
+}

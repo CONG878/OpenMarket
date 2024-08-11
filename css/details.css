@@ -1,0 +1,162 @@
+figure {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin: 80px 0px 140px;
+}
+
+#product-img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
+
+figcaption {
+    width: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+h3 {
+    margin: 0;
+}
+
+h1 {
+    margin: 16px 0 20px;
+}
+
+.product-info .text-lg {
+    font-weight: 400;
+    margin: 0;
+}
+
+.amount-value {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45.07px;
+}
+
+.product-info .text-md {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+/* 수량 조절 버튼 */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-top: 2px solid #C4C4C4;
+    border-bottom: 2px solid #C4C4C4;
+    padding: 30px 0;
+}
+
+.adjust {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid #C4C4C4;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+}
+
+#dec {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#inc {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.quantity-controls input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+}
+
+/* 총 상품 금액 */
+.total-price-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-price-section p {
+    font-weight: 400;
+}
+
+.total-quantity {
+    color: #767676;
+}
+
+.quantity-value {
+    font-weight: 700;
+    color: #21BF48;
+}
+
+.divider {
+    color: #C4C4C4;
+}
+
+.total-amount {
+    color: #21BF48;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy {
+    width: 416px;
+    height: 60px;
+}
+
+.green.addToCart {
+    width: 200px;
+    height: 60px;
+    background-color: #767676;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.tabs label {
+    cursor: pointer;
+    width: 320px;
+    height: 60px;
+    border: none;
+    border-bottom: 6px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label {
+    border-bottom: 6px solid #21BF48;
+    color: #21BF48;
+}
+
+.tab-content {
+    height: 360px;
+}

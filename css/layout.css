@@ -1,0 +1,262 @@
+/* 글꼴: Spoqa Han Sans Neo */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+/* 문장 요소 */
+/* 페이지 제목 */
+h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+/* 상품명: 상세 페이지 */
+figcaption h1 {
+    font-weight: 400;
+    line-height: 45.07px;
+}
+
+/* 상품명: 목록 & 장바구니 */
+h2 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* 판매자: 상세 페이지 */
+h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.54px;
+    color: #767676;
+}
+
+/* 판매자: 목록 페이지 */
+h4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #767676;
+}
+
+/* 일반 텍스트: 대, 중, 소 */
+.text-lg {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22.54px;
+}
+
+.text-md {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.03px;
+}
+
+.text-sm {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.53px;
+}
+
+figcaption .text-sm {
+    color: #767676;
+}
+
+/* 버튼 */
+button {
+    cursor: pointer;
+}
+
+button.green,
+button.white {
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+button.green {
+    background-color: #21BF48;
+    color: white;
+}
+
+button.green:disabled {
+    background-color: #C4C4C4;
+}
+
+button.white {
+    background-color: white;
+    color: #767676;
+    border: 1px solid #C4C4C4;
+}
+
+button.green.small,
+button.white.small {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20.03px;
+}
+
+/* 헤더 */
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(100%/6);
+    box-shadow: 0px 4px 5px 0px #0000001A;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    width: 124px;
+}
+
+.search {
+    position: relative;
+}
+
+.search input[type="search"] {
+    width: 400px;
+    height: 46px;
+    border: 2px solid #21bf48;
+    border-radius: 50px;
+    padding-left: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.03px;
+}
+
+.search button {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search button img {
+    display: block;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.right-section img {
+    display: block;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    padding: 60px calc(100%/6) 63px;
+    gap: 30px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.sitemap a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.53px;
+    text-decoration: none;
+    color: black;
+}
+
+.sitemap a:hover {
+    font-weight: 700;
+}
+
+.sns img {
+    display: block;
+}
+
+.border {
+    height: 1px;
+    background-color: #C4C4C4;
+    border: none;
+}
+
+.info {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.info span {
+    font-weight: 700;
+}
+
+/* 모달창 */
+.main-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 360px;
+    height: 200px;
+    background: white;
+    border: 1px solid #C4C4C4;
+    text-align: center;
+    /*padding: 50px 75px 40px;*/
+    box-sizing: border-box;
+}
+
+#modal-no,
+#modal-yes {
+    font-weight: 400;
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background-color: white;
+    border: none;
+}
+
+.modal-close img {
+    display: block;
+}

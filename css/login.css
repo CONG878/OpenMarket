@@ -1,0 +1,102 @@
+.logo {
+    margin: 100px auto 70px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.tabs {
+    display: flex;
+    margin: 0 auto -20px;
+    width: 550px;
+    position: relative;
+    z-index: 0;
+}
+.tabs label {
+    cursor: pointer;
+    width: 50%;
+    height: 80px;
+    padding-bottom: 0px;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.tabs label h2 {
+    font-weight: 500;
+    margin-top: -20px;
+}
+.tabs input[type="radio"] {
+    display: none;
+}
+.tabs input[type="radio"]:checked + label {
+    background-color: white;
+    border-top: 1px solid #0078d7;
+    border-bottom: 1px solid white;
+}
+.tab-content {
+    width: 550px;
+    background-color: white;
+    border: 1px solid #c4c4c4;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 34px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+.tab-content input {
+    width: 480px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 20.03px;
+    border: none;
+    border-bottom: 1px solid #c4c4c4;
+    outline: none;
+    display: block;
+    margin: 0px auto 6px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tab-content input::placeholder {
+    font-weight: 400;
+    color: #767676;
+}
+.tab-content input:focus {
+    border-bottom: 1px solid #0078d7;
+}
+.tab-content input #user-id {
+    font-weight: 500;
+}
+.tab-content input #user-pw {
+    font-weight: 700;
+}
+.tab-content .text-md {
+    color: red;
+    margin: 26px 0px -10px 35px;
+    font-weight: 500;
+}
+.tab-content .green {
+    width: 480px;
+    height: 60px;
+    display: block;
+    margin: 36px auto;
+}
+.links {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.03px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+.links a {
+    color: #333333;
+    text-decoration: none;
+}

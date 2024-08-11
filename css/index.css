@@ -1,0 +1,68 @@
+.event-banner {
+    background-color: #F2F2F2;
+    height: 500px;
+    margin-bottom: 80px;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    gap: 70px;
+    justify-content: center;
+}
+.product-item {
+    border: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    height: 490px;
+}
+.product-item a {
+    text-decoration: none;
+    color: black;
+}
+.product-item img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    margin-bottom: 6px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.product-item figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    align-items: flex-start;
+}
+.product-item h4, h2, p{
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.product-item .text-md span {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30.05px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.page-link {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: none;
+    cursor: pointer;
+}
+.page-link.active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세 정보</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <figure>
+            <img src="img/blank.png" alt="상품 이미지" id="product-img">
+            <figcaption>
+                <div class="product-info"></div>
+                <form action="" method="post">
+                    <div class="quantity-controls">
+                        <button type="button" class="adjust" id="dec">-</button>
+                        <input name="quantity" id="quantity" value="0" readonly>
+                        <button type="button" class="adjust" id="inc">+</button>
+                    </div>
+                    <div class="text-lg total-price-section">
+                        <span>총 상품 금액</span>
+                        <p>
+                            <span class="total-quantity">총 수량
+                                <span class="quantity-value">0</span>개</span>
+                            <span class="divider">|</span>
+                            <span class="total-amount"><span class="amount-value">0</span>원</span>
+                        </p>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="buy green">바로 구매</button>
+                        <button type="button" class="addToCart green">장바구니</button>
+                    </div>
+                </form>
+            </figcaption>
+        </figure>
+        <section class="tabs-wrapper">
+            <div class="tabs">
+                <input type="radio" name="tab" id="btn" value="버튼" checked><label for="btn">
+                    <span class="text-lg">버튼</span></label>
+                <input type="radio" name="tab" id="review" value="리뷰"><label for="review">
+                    <span class="text-lg">리뷰</span></label>
+                <input type="radio" name="tab" id="qna" value="Q&A"><label for="qna">
+                    <span class="text-lg">Q&A</span></label>
+                <input type="radio" name="tab" id="return" value="반품/교환정보"><label for="return">
+                    <span class="text-lg">반품/교환정보</span></label>
+            </div>
+            <div class="tab-content"></div>
+        </section>
+    </main>
+    <div class="main-modal" style="display: none;"></div>
+    <footer></footer>
+    <script src="js/details.js"></script>
+</body>
+</html>
