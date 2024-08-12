@@ -217,7 +217,6 @@ footer {
     font-weight: 700;
 }
 
-/* 모달창 */
 .main-modal {
     position: fixed;
     top: 0;
@@ -226,8 +225,8 @@ footer {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* 수평 중앙 정렬 유지 */
+    align-items: flex-start; /* 수직 정렬을 상단으로 변경 */
 }
 
 .modal-content {
@@ -239,10 +238,11 @@ footer {
     text-align: center;
     /*padding: 50px 75px 40px;*/
     box-sizing: border-box;
+    margin-top: 50px; /* 상단에 조금의 여백 추가 */
 }
 
-#modal-no,
-#modal-yes {
+.modal-no,
+.modal-yes {
     font-weight: 400;
     width: 100px;
     height: 40px;
