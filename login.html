@@ -9,7 +9,7 @@
 </head>
 <body>
     <img src="img/HODU.svg" alt="호두 로고" class="logo">
-    <div id="login-form">
+    <form action="" method="post" onsubmit="return handleFormSubmit(event)">
         <div class="tabs">
             <input type="radio" id="buyer" name="user_type" value="BUYER" checked>
             <label for="buyer"><h2>구매회원 로그인</h2></label>
@@ -20,13 +20,15 @@
             <input type="text" name="user-id" id="user-id" placeholder="아이디" required>
             <input type="password" name="user-pw" id="user-pw" placeholder="비밀번호" required>
             <div id="error-message" class="text-md" style="display: none;"></div>
-            <button type="button" class="green" onclick="handleFormSubmit()">로그인</button>
+            <button type="submit" class="green">로그인</button>
         </div>
-    </div>
+    </form>
     <div class="links text-md"><a href="">회원가입</a> | <a href="">비밀번호 찾기</a></div>
 </body>
 <script>
-    async function handleFormSubmit() {
+    async function handleFormSubmit(event) {
+        event.preventDefault();
+
         const userId = document.getElementById('user-id').value;
         const userPw = document.getElementById('user-pw').value;
         const userType = document.querySelector('input[name="user_type"]:checked').value;

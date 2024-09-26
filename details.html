@@ -14,10 +14,10 @@
             <img src="img/blank.png" alt="상품 이미지" id="product-img">
             <figcaption>
                 <div class="product-info"></div>
-                <div>
+                <form action="" method="post">
                     <div class="quantity-controls">
                         <button type="button" class="adjust" id="dec">-</button>
-                        <input name="quantity" id="quantity" value="0">
+                        <input name="quantity" id="quantity" value="0" readonly>
                         <button type="button" class="adjust" id="inc">+</button>
                     </div>
                     <div class="text-lg total-price-section">
@@ -30,10 +30,10 @@
                         </p>
                     </div>
                     <div class="buttons">
-                        <button type="button" class="buy green">바로 구매</button>
+                        <button type="submit" class="buy green">바로 구매</button>
                         <button type="button" class="addToCart green">장바구니</button>
                     </div>
-                </div>
+                </form>
             </figcaption>
         </figure>
         <section class="tabs-wrapper">
@@ -50,7 +50,7 @@
             <div class="tab-content"></div>
         </section>
     </main>
-    <div class="main-modal" style="display: none;"></div>
+    <dialog class="main-modal"></dialog>
     <footer></footer>
     <script src="js/details.js"></script>
 </body>
