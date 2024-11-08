@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-    fetch('https://openmarket.weniv.co.kr/cart', {
+    fetch('https://estapi.openmarket.weniv.co.kr/cart', {
         headers: {
             'Content-Type': 'application/json',
             Authorization: `JWT ${userInfo.token}`
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             const products = document.querySelector('.products-in-cart');
             const productPromises = data.results.map(async product => {
-                const response = await fetch(`https://openmarket.weniv.co.kr/products/${product.product_id}`, {
+                const response = await fetch(`https://estapi.openmarket.weniv.co.kr/products/${product.product_id}`, {
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         amountDisplay.textContent = `${(price * quantity).toLocaleString()}원`;
         calculateTotalAmount();
 
-        fetch(`https://openmarket.weniv.co.kr/cart/${cartItemId}`, {
+        fetch(`https://estapi.openmarket.weniv.co.kr/cart/${cartItemId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 상품 삭제 기능
     function removeProductFromCart(productItem, cartItemId) {
         // 서버에 DELETE 요청 보내기
-        fetch(`https://openmarket.weniv.co.kr/cart/${cartItemId}`, {
+        fetch(`https://estapi.openmarket.weniv.co.kr/cart/${cartItemId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

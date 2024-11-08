@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // 로그인 정보가 있을 때 로그인을 마이페이지로 대체
             const userAction = document.querySelector('.user-action');
             if (userInfo && userInfo.token) {
-                userAction.href = "#";  // 임시로 #로 설정
-                userAction.addEventListener('click', handleLogout);
+                userAction.href = "myPage.html";
                 userAction.innerHTML = '<img src="img/myPage.svg" alt="마이페이지">';
             }
 
@@ -52,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function fetchProducts(page = 1) {
-    fetch(`https://openmarket.weniv.co.kr/products/?page=${page}`, {
+    fetch(`https://estapi.openmarket.weniv.co.kr/products/?page=${page}`, {
         headers: {
             'Content-Type': 'application/json'
         }
@@ -107,34 +106,11 @@ function updatePagination(totalCount, currentPage) {
 // 모달창을 표시하는 함수
 function showModal() {
     const modal = document.querySelector('.main-modal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 }
 
 // 모달창을 닫는 함수
 function closeModal() {
     const modal = document.querySelector('.main-modal');
     modal.style.display = 'none';
-}
-
-// 로그아웃 처리 함수
-function handleLogout(event) {
-    event.preventDefault(); // 기본 링크 동작 방지
-
-    fetch('https://openmarket.weniv.co.kr/accounts/logout/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            // 로그아웃 성공 시 로컬 스토리지 비우기
-            localStorage.removeItem('userInfo');
-            // 로그인 페이지로 이동
-            window.location.href = 'login.html';
-        } else {
-            console.error('Logout failed');
-        }
-    })
-    .catch(error => console.error('Error during logout:', error));
 }

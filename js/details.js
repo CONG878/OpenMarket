@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const productId = params.get('product_id');
-    const apiURL = `https://openmarket.weniv.co.kr/products/${productId}`;
+    const apiURL = `https://estapi.openmarket.weniv.co.kr/products/${productId}`;
     const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
     // Load header
@@ -99,9 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             quantityInput.addEventListener('change', () => {
-                quantity = parseInt(quantityInput.value) || 0;
                 quantity = Math.min(Math.max(0, quantity), data.stock);
-                quantityInput.value = quantity;
                 updateButtons();
                 updatePrice();
             });
@@ -126,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     showModal(); // 유저 정보가 없는 경우 모달을 표시
                 } else {
                     // 유저 정보가 있는 경우 상품을 장바구니에 추가하고 cart.html로 이동
-                    fetch('https://openmarket.weniv.co.kr/cart', {
+                    fetch('https://estapi.openmarket.weniv.co.kr/cart', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
