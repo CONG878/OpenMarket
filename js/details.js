@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
-    const productId = params.get('product_id');
+    const productId = params.get('id');
     const apiURL = `https://estapi.openmarket.weniv.co.kr/products/${productId}`;
     const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const product = document.querySelector('.product-info');
             product.innerHTML = `
                 <h3>${data.store_name}</h3>
-                <h1>${data.product_name}</h1>
+                <h1>${data.name}</h1>
                 <p class="text-lg"><span class="amount-value">${data.price.toLocaleString()}</span>원</p>
                 <p class="text-md">
                     <span id="method">택배배송</span> / 
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             Authorization: `JWT ${userInfo.token}`
                         },
                         body: JSON.stringify({
-                            "product_id": data.product_id,
+                            "id": data.id,
                             "quantity": quantity
                         })
                     })/*

@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             const products = document.querySelector('.products-in-cart');
             const productPromises = data.results.map(async product => {
-                const response = await fetch(`https://estapi.openmarket.weniv.co.kr/products/${product.product_id}`, {
+                const response = await fetch(`https://estapi.openmarket.weniv.co.kr/products/${product.id}`, {
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const productItem = document.createElement('article');
                 productItem.classList.add('product-item');
                 productItem.innerHTML = `
-                        <input type="checkbox" id="product-${product.product_id}" name="select-product" class="select-product">
-                        <label for="product-${product.product_id}"></label>
+                        <input type="checkbox" id="product-${product.id}" name="select-product" class="select-product">
+                        <label for="product-${product.id}"></label>
                         <figure>
-                            <img src="${productDetails.image}" alt="${productDetails.product_name}">
+                            <img src="${productDetails.image}" alt="${productDetails.name}">
                             <figcaption>
                                 <p class="text-sm">${productDetails.store_name}</p>
-                                <h2>${productDetails.product_name}</h2>
+                                <h2>${productDetails.name}</h2>
                                 <span class="text-md">${productDetails.price.toLocaleString()}원</span>
                                 <p class="shipping text-sm">
                                     <span id="method">${productDetails.shipping_method == 'PARCEL' ? '택배배송' : '직접배송'}</span> / 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 </p>
                             </figcaption>
                         </figure>
-                        <div class="quantity-controls" id="controls-${product.product_id}">
+                        <div class="quantity-controls" id="controls-${product.id}">
                             <button type="button" class="adjust dec">-</button>
                             <input name="quantity" class="quantity" value="${product.quantity}" pattern="\\d*" data-stock="${productDetails.stock}" data-price="${productDetails.price}">
                             <button type="button" class="adjust inc">+</button>
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     quantity = Math.max(0, quantity - 1);
                     quantityInput.value = quantity;
                     updateButtonState(quantityInput, decButton, incButton);
-                    updatePriceDisplay(amountDisplay, quantityInput, product.cart_item_id, product.product_id);
+                    updatePriceDisplay(amountDisplay, quantityInput, product.cart_item_id, product.id);
                 });
 
                 // 수량 증가 버튼 클릭
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     quantity = Math.min(maxStock, quantity + 1);
                     quantityInput.value = quantity;
                     updateButtonState(quantityInput, decButton, incButton);
-                    updatePriceDisplay(amountDisplay, quantityInput, product.cart_item_id, product.product_id);
+                    updatePriceDisplay(amountDisplay, quantityInput, product.cart_item_id, product.id);
                 });
 
                 // 수량 직접 입력
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     quantity = Math.min(Math.max(0, quantity), maxStock);
                     quantityInput.value = quantity;
                     updateButtonState(quantityInput, decButton, incButton);
-                    updatePriceDisplay(amountDisplay, quantityInput, product.cart_item_id, product.product_id);
+                    updatePriceDisplay(amountDisplay, quantityInput, product.cart_item_id, product.id);
                 });
                 
                 // close 버튼 클릭 시 상품 삭제 이벤트 추가
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Authorization: `JWT ${userInfo.token}`
             },
             body: JSON.stringify({
-                product_id: productId,
+                id: productId,
                 quantity: quantity,
             })
         })
