@@ -68,7 +68,7 @@ function fetchProducts(page = 1) {
                 <a href="details.html?id=${product.id}">
                     <img src="${product.image}" alt="${product.name}">
                     <figcaption>
-                        <h4>${product.store_name}</h4>
+                        <h4>${product.seller.store_name}</h4>
                         <h2>${product.name}</h2>
                         <p class="text-md"><span>${product.price.toLocaleString()}</span>원</p>
                     </figcaption>

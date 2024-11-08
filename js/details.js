@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             img.src = `${data.image}`;
             const product = document.querySelector('.product-info');
             product.innerHTML = `
-                <h3>${data.store_name}</h3>
+                <h3>${data.seller.store_name}</h3>
                 <h1>${data.name}</h1>
                 <p class="text-lg"><span class="amount-value">${data.price.toLocaleString()}</span>원</p>
                 <p class="text-md">

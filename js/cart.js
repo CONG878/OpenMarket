@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <figure>
                             <img src="${productDetails.image}" alt="${productDetails.name}">
                             <figcaption>
-                                <p class="text-sm">${productDetails.store_name}</p>
+                                <p class="text-sm">${productDetails.seller.store_name}</p>
                                 <h2>${productDetails.name}</h2>
                                 <span class="text-md">${productDetails.price.toLocaleString()}원</span>
                                 <p class="shipping text-sm">
