@@ -217,6 +217,7 @@ footer {
     font-weight: 700;
 }
 
+/* 모달창 */
 .main-modal {
     position: fixed;
     top: 0;
@@ -238,11 +239,10 @@ footer {
     text-align: center;
     /*padding: 50px 75px 40px;*/
     box-sizing: border-box;
-    margin-top: 50px; /* 상단에 조금의 여백 추가 */
 }
 
-.modal-no,
-.modal-yes {
+#modal-no,
+#modal-yes {
     font-weight: 400;
     width: 100px;
     height: 40px;
