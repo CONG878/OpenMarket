@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.text())
         .then(data => {
             document.querySelector('.main-modal').outerHTML = data;
+            document.querySelector('.main-modal').style.display = 'none';
 
             // 모달 닫기 버튼 이벤트
             document.querySelector('.modal-close').addEventListener('click', closeModal);
