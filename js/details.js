@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 모달창을 표시하는 함수
 function showModal() {
     const modal = document.querySelector('.main-modal');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 }
 
 // 모달창을 닫는 함수
